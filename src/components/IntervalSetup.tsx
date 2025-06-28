@@ -219,28 +219,27 @@ export function IntervalSetup({ onStartTraining }: IntervalSetupProps) {
                 </select>
               </div>
 
-<div className="flex gap-1 mb-4 w-full max-w-xs mx-auto">
-  <input
-    type="number"
-    placeholder="Min"
-    value={newInterval.minutes}
-    onChange={(e) => setNewInterval({ ...newInterval, minutes: e.target.value })}
-    className="w-16 px-2 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent text-center"
-    min="0"
-    inputMode="numeric"
-  />
-  <span className="flex items-center text-gray-500 font-medium">:</span>
-  <input
-    type="number"
-    placeholder="Seg"
-    value={newInterval.seconds}
-    onChange={(e) => setNewInterval({ ...newInterval, seconds: e.target.value })}
-    className="w-16 px-2 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent text-center"
-    min="0"
-    max="59"
-    inputMode="numeric"
-  />
-</div>
+              <div className="flex gap-2 mb-4">
+                <input
+                  type="number"
+                  placeholder="Min"
+                  value={newInterval.minutes}
+                  onChange={(e) => setNewInterval({ ...newInterval, minutes: e.target.value })}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent flex-1"
+                  min="0"
+                />
+                
+                <span className="flex items-center text-gray-500 font-medium">:</span>
+                <input
+                  type="number"
+                  placeholder="Seg"
+                  value={newInterval.seconds}
+                  onChange={(e) => setNewInterval({ ...newInterval, seconds: e.target.value })}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent flex-1"
+                  min="0"
+                  max="59"
+                />
+              </div>
 
               {/* Color Selector */}
               <div className="mb-4">
